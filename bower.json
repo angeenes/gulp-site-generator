@@ -1,0 +1,22 @@
+{
+  "name": "bs3 Atomic assemble generator",
+  "authors": [
+    "Nelson Patrao <nelson.patrao@gmail.com>"
+  ],
+  "description": "Create a website with Assemble , Bootstrap 3 and Atomic css system",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-stylus": "^5.0.7",
+    "normalize.styl": "4.1.1"
+  }
+}

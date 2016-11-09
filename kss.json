@@ -1,0 +1,15 @@
+{
+    "source": "src/templates/components/atoms",
+    "destination": "dist/styleguide/",
+    "//": "The css and js paths are URLs relative to the style guide destination.",
+    "css": [
+        "../css/main.min.css"
+    ],
+    "js": [
+        "../js/main.min.js"
+    ],
+    "title": "starter Style Guide",
+    "verbose": true,
+    "homepage": "../../readme.md",
+    "builder": "src/styleguide-builder"
+}

@@ -1,0 +1,50 @@
+// **************
+// Content driven css helpers * Atomic content css
+// **************
+
+//Paddings
+for padding, size in $sizes
+  .p-all-{padding}, .p-left-{padding}, .p-right-{padding}, .p-top-{padding}, .p-bottom-{padding}
+    padding size
+
+//margins
+for number, size in $sizes
+  .m-all-{number}
+    margin size
+  .m-left-{number}
+    margin-left size
+  .m-right-{number}
+    margin-right size
+  .m-top-{number}
+    margin-top size
+  .m-bottom-{number}
+    margin-bottom size
+  .m-xs-top-{number}
+    @media (max-width : 480px)
+      margin-top size
+  .m-xs-bottom-{number}
+    @media (max-width : 480px)
+      margin-bottom size
+
+//fonts
+for fontsize, size in $fontsizes
+  .fs-{fontsize}
+    font-size size
+    @media (max-width : 480px)
+      font-size size - 11px
+//*exeption
+@media (max-width : 480px)
+  .fs-h3
+    font-size 14px
+    font-weight 700
+
+//backgrounds & colors
+for colour, color in $colors
+  .bg-{colour}
+    background-color color !important
+  .c-{colour}
+    color color
+  .b-{colour}
+    border 1px solid color
+  .o-{colour}
+    outline 1px solid color

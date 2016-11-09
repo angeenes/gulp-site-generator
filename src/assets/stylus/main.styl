@@ -1,0 +1,27 @@
+// Import Paths
+$normalizePath = "../../../bower_components/normalize.styl/";
+$componentsPath = "../../../src/templates/components/components.styl";
+
+// Import Bootstrap styles
+@import "bootstrap"
+
+// Reset
+@import $normalizePath + "normalize.styl";
+
+// Atomic files
+@import "atomic_vars";
+
+// Your project variables
+@import "theme_vars";
+
+// Atomic librairy
+@import "atomic"
+
+// Your project specific Components
+@import "theme"
+
+// Components ( atoms, molecules, organisms )
+@import $componentsPath
+
+// Classes Shame ///Bouuuuu, shame on you!!!
+@import "shame"

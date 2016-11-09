@@ -1,0 +1,35 @@
+// Boutons
+//
+// Les boutons sont clickables et invitent au clic.<br>
+// Il existe deux tailles de boutons, **small** et **large**.
+// Pour créer un bouton **large**, ajouté la classe *btn__lg*.
+// Pour créer un bouton **small**, ajouté la classe *btn__xs*.
+// Pour créer un lien avec le style d'un bouton, ajouter la classe *btn-link*.
+//
+// *
+//
+// .btn__xs     - bouton de grande "small"
+// .btn__lg     - bouton de petite taille "large"
+// .disabled    - bouton Disabled. If you use `<button>` element, that is acceptable to add `disabled` attribute instead.
+//
+// Markup:
+//buttons.hbs
+//
+// Style guide: atoms.1
+
+.btn
+  color white
+  border 0
+  padding 0 30px
+  height 40px
+  &:hover :focus
+    border 5px solid blue
+  &.btn__xs
+    height 30px
+  &.btn__lg
+    height 50px
+
+// button colors
+for colour, color in $colors
+  .btn-color__{colour}
+    background-color color
