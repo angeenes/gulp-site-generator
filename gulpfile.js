@@ -118,14 +118,20 @@ const fontName = 'icons';
 gulp.task('icofont', () => {
     return gulp.src(['src/assets/icons/*.svg'])
         .pipe(iconfontCss({
-            fontName: fontName,
+            fontName: fontName.toLowerCase(),
             // path: 'src/assets/css/templates/_icons.css',
             targetPath: '../css/icons.css',
             fontPath: '../../fonts/'
         }))
         .pipe(cssmin())
         .pipe(iconfont({
-            fontName: fontName
+            fontName: fontName,
+            formats: ['ttf', 'eot', 'woff', 'woff2'],
+            appendCodepoints: true,
+            appendUnicode: false,
+            normalize: true,
+            fontHeight: 1000,
+            centerHorizontally: true
         }))
         .pipe(gulp.dest('dist/fonts/'))
 });
