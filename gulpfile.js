@@ -10,11 +10,9 @@ const assemble = require('assemble');
 const handle = require('assemble-handle');
 const helpers = require('handlebars-helpers');
 const handlebars = require('handlebars');
-// const yaml = require('helper-yaml');
 const htmlmin = require('gulp-htmlmin');
 const extname = require('gulp-extname');
 const stylus = require('gulp-stylus');
-const bootstrap = require('bootstrap-styl');
 const nib = require('nib');
 const babel = require("gulp-babel");
 const uglify = require('gulp-uglify');
@@ -24,7 +22,6 @@ const eslint = require('gulp-eslint');
 const sourcemaps = require("gulp-sourcemaps");
 const concat = require("gulp-concat");
 const gulpif = require('gulp-if');
-// const pump = require('pump');// *pump to callback node errors to terminal
 const iconfont = require('gulp-iconfont');
 const iconfontCss = require('gulp-iconfont-css');
 const cssmin = require('gulp-cssmin');
@@ -143,7 +140,7 @@ gulp.task('icofont', () => {
 gulp.task('style-dist', () => {
     const options = {
         compress: true,
-        use: [nib(),bootstrap()]
+        use: [nib()]
     };
     // return gulp.src( [filePath.dist.stylMain, filePath.dist.stylComponents ] )
     return gulp.src(filePath.dist.stylMain)
@@ -158,7 +155,7 @@ gulp.task('style-dist', () => {
 gulp.task('style-styleguide', () => {
     const options = {
         compress: true,
-        use: [nib(),bootstrap()]
+        use: [nib()]
     };
     // return gulp.src( [filePath.dist.stylMain, filePath.dist.stylComponents ] )
     return gulp.src(filePath.styleguide.styl)

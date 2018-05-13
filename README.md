@@ -5,7 +5,6 @@ Render static html files with
  - Pattern Lab templating generator ( atoms, molecular, organisms ... ) - not mandatory, use your own templating patten
  - Stylus css preprocesseur
  - Atomic css built-in helpers
- - Bootstrap 3 ( configurable by components if needed )
  - Javascript ES6 with Babel Transpiler
  - Lint and Browser-sync with watch tasks
  - Pre-built-in styleguide static generator ( KSS documentation : https://github.com/kss-node/kss/blob/spec/SPEC.md )
@@ -14,7 +13,7 @@ Render static html files with
 
 Install node modules
  ```javascript
- npm install
+ npm install or Yarn
  ```
 
 Install vendor
